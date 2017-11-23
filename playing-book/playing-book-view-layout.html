@@ -1,0 +1,26 @@
+<!--
+`playing-book-view-layout`
+@group Playing UI
+@element playing-book-view-layout
+-->
+<dom-module id="playing-book-view-layout">
+
+  <template>
+    <playing-document-content document="[[document]]"></playing-document-content>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'playing-book-view-layout',
+      properties: {
+        /**
+         * @doctype book
+         */
+        document: {
+          type: Object
+        }
+      }
+    });
+  </script>
+
+</dom-module>

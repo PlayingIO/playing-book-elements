@@ -1,0 +1,26 @@
+<!--
+`playing-chapter-view-layout`
+@group Playing UI
+@element playing-chapter-view-layout
+-->
+<dom-module id="playing-chapter-view-layout">
+
+  <template>
+    <playing-content-editor role="widget" document="[[document]]" type="chapter"></playing-content-editor>
+    <playing-document-attachments role="widget" document="[[document]]"></playing-document-attachments>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'playing-chapter-view-layout',
+      behaviors: [Mostly.LayoutBehavior],
+      properties: {
+        /**
+         * @doctype chapter
+         */
+        document: Object
+      }
+    });
+  </script>
+
+</dom-module>
