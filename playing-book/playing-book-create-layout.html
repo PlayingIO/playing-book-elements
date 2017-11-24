@@ -6,6 +6,12 @@
 <dom-module id="playing-book-create-layout">
 
   <template>
+    <div role="widget">
+      <label>[[i18n('label.book.useDouban')]]</label>
+      <paper-toggle-button
+              checked="{{document.useDouban}}" noink></paper-toggle-button>
+    </div>
+
     <mostly-input role="widget"
             label="[[i18n('title')]]"
             name="title"
@@ -13,10 +19,75 @@
             autofocus required>
     </mostly-input>
 
+    <mostly-input role="widget"
+            label="[[i18n('label.book.isbn')]]"
+            name="isbn"
+            value="{{document.isbn}}">
+    </mostly-input>
+
+    <mostly-input role="widget"
+            label="[[i18n('label.book.originTitle')]]"
+            name="originTitle"
+            value="{{document.originTitle}}"
+            autofocus>
+    </mostly-input>
+
+    <mostly-input role="widget"
+            label="[[i18n('label.dublincore.authors')]]"
+            name="authors"
+            value="{{document.authors}}">
+    </mostly-input>
+
+    <mostly-input role="widget"
+            label="[[i18n('label.book.translators')]]"
+            name="translators"
+            value="{{document.translators}}">
+    </mostly-input>
+
+    <mostly-input role="widget"
+            label="[[i18n('label.book.publisher')]]"
+            name="publisher"
+            value="{{document.publisher}}">
+    </mostly-input>
+
+    <mostly-date-picker role="widget" label="[[i18n('label.dublincore.issuedAt')]]" name="issuedAt"
+            value="{{document.issuedAt}}">
+    </mostly-date-picker>
+
+    <mostly-input role="widget"
+            label="[[i18n('label.book.binding')]]"
+            name="binding"
+            value="{{document.binding}}">
+    </mostly-input>
+
+    <mostly-input role="widget"
+            label="[[i18n('label.book.pages')]]"
+            name="pages"
+            value="{{document.pages}}">
+    </mostly-input>
+
+    <mostly-input role="widget"
+            label="[[i18n('label.book.price')]]"
+            name="price"
+            value="{{document.price}}">
+    </mostly-input>
+
     <mostly-textarea role="widget"
             label="[[i18n('label.description')]]"
             name="description"
             value="{{document.description}}">
+    </mostly-textarea>
+
+    <mostly-textarea role="widget"
+            label="[[i18n('label.book.authorIntro')]]"
+            name="authorIntro"
+            value="{{document.authorIntro}}">
+    </mostly-textarea>
+
+    <mostly-textarea role="widget"
+            label="[[i18n('label.book.catalog')]]"
+            name="catalog"
+            value="{{document.catalog}}">
     </mostly-textarea>
 
     <playing-vocabulary-suggestion role="widget" label="[[i18n('label.dublincore.nature')]]"
@@ -37,9 +108,6 @@
             min-chars="0">
     </playing-vocabulary-suggestion>
 
-    <mostly-date-picker role="widget" label="[[i18n('label.dublincore.expire')]]" name="expired"
-            value="{{document.expired}}">
-    </mostly-date-picker>
   </template>
 
   <script>

@@ -11,14 +11,69 @@
       <div name="title">[[document.title]]</div>
     </div>
 
+    <div role="widget">
+      <label>[[i18n('label.book.isbn')]]</label>
+      <div name="isbn">[[document.isbn]]</div>
+    </div>
+
+    <div role="widget" hidden$="[[!document.originTitle]]">
+      <label>[[i18n('label.book.originTitle')]]</label>
+      <div name="originTitle">[[document.originTitle]]</div>
+    </div>
+
+    <div role="widget" hidden$="[[!document.authors.length]]">
+      <label>[[i18n('label.dublincore.authors')]]</label>
+      <div name="authors">[[document.authors]]</div>
+    </div>
+
+    <div role="widget" hidden$="[[!document.translators.length]]">
+      <label>[[i18n('label.book.translators')]]</label>
+      <div name="translators">[[document.translators]]</div>
+    </div>
+
+    <div role="widget" hidden$="[[!document.publisher]]">
+      <label>[[i18n('label.book.publisher')]]</label>
+      <div name="publisher">[[document.publisher]]</div>
+    </div>
+
+    <div role="widget" hidden$="[[!document.issuedAt]]">
+      <label>[[i18n('label.dublincore.issuedAt')]]</label>
+      <div name="issuedAt">[[formatDate(document.issuedAt)]]</div>
+    </div>
+
+    <div role="widget" hidden$="[[!document.binding]]">
+      <label>[[i18n('label.book.binding')]]</label>
+      <div name="binding">[[document.binding]]</div>
+    </div>
+
+    <div role="widget" hidden$="[[!document.pages]]">
+      <label>[[i18n('label.book.pages')]]</label>
+      <div name="binding">[[document.pages]]</div>
+    </div>
+
+    <div role="widget" hidden$="[[!document.price]]">
+      <label>[[i18n('label.book.price')]]</label>
+      <div name="binding">[[document.price]]</div>
+    </div>
+
     <div role="widget" hidden$="[[!document.description]]">
       <label>[[i18n('label.dublincore.description')]]</label>
       <div name="description" class="multiline">[[document.description]]</div>
     </div>
 
+    <div role="widget" hidden$="[[!document.authorIntro]]">
+      <label>[[i18n('label.book.authorIntro')]]</label>
+      <div name="authorIntro">[[formatDirectory(document.authorIntro)]]</div>
+    </div>
+
+    <div role="widget" hidden$="[[!document.catalog]]">
+      <label>[[i18n('label.book.catalog')]]</label>
+      <div name="catalog">[[formatDirectory(document.catalog)]]</div>
+    </div>
+
     <div role="widget" hidden$="[[!document.nature]]">
       <label>[[i18n('label.dublincore.nature')]]</label>
-      <div name="nature">[[formatDirectory(document.nature)]]</div>
+      <div name="description" class="multiline">[[document.nature]]</div>
     </div>
 
     <playing-vocabulary-suggestion role="widget"
@@ -32,15 +87,6 @@
             readonly>
     </playing-vocabulary-suggestion>
 
-    <div role="widget" hidden$="[[!document.coverage]]">
-      <label>[[i18n('label.dublincore.coverage')]]</label>
-      <div name="coverage">[[formatDirectory(document.coverage)]]</div>
-    </div>
-
-    <div role="widget" hidden$="[[!document.expired]]">
-      <label>[[i18n('label.dublincore.expire')]]</label>
-      <div name="expired">[[formatDate(document.expired)]]</div>
-    </div>
   </template>
 
   <script>
