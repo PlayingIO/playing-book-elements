@@ -63,7 +63,7 @@
 
     <div role="widget" hidden$="[[!document.issuedAt]]">
       <label>[[i18n('label.dublincore.issuedAt')]]</label>
-      <div name="issuedAt">[[formatDate(document.issuedAt)]]</div>
+      <mostly-date name="issuedAt" datetime="[[document.issuedAt]]"></mostly-date>
     </div>
 
     <div role="widget" hidden$="[[!document.binding]]">
