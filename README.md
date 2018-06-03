@@ -1,7 +1,7 @@
 Playing Book Web Components
 ===========================
 
-Book management web components for playful applications.
+Book management web components for building playful applications.
 
 # Usage
 
